@@ -36,8 +36,15 @@ form.addEventListener("submit", (e) => {
   });
 
 
-  function loadEntries(){
+  function loadEntries(filter = ""){
     const entries = JSON.parse(localStorage.getItem("entries")) || [];
     entriesDiv.innerHTML = "";
-  }
- 
+
+    const filteredEntries = entries.filter(entry =>
+        entry.title.toLowerCase().includes(filter.toLowerCase()) ||
+        entry.content.toLowerCase().includes(filter.toLowerCase())
+      );
+      if (filteredEntries.length === 0) {
+        entriesDiv.innerHTML = "<p>No entries found.</p>";
+        return;
+  }}

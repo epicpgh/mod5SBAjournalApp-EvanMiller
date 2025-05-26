@@ -13,6 +13,8 @@ const formattedDate = today.toLocaleDateString(undefined, options);
 
 document.getElementById("spanDate").textContent = `Today's Date: ${formattedDate}`;
 
+
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const title = titleInput.value.trim();
@@ -30,6 +32,12 @@ form.addEventListener("submit", (e) => {
     titleInput.value = "";
     contentInput.value = "";
     loadEntries();
+    localStorage.setItem("key", JSON.stringify(data));
   });
 
-  localStorage.setItem("key", JSON.stringify(data));
+
+  function loadEntries(){
+    const entries = JSON.parse(localStorage.getItem("entries")) || [];
+    entriesDiv.innerHTML = "";
+  }
+ 

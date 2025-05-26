@@ -10,17 +10,22 @@
 </head>
 <body>
 
-  <h1>What do you want to manifest today?</h1>
+  <div class = "container">
 
+  <h1>What do you want to manifest today?</h1>
+  <span id="spanDate">Today's Date: </span>
+  <input type="text" id="search" placeholder="Search entries..." />
   <form id="journal-form">
     <input type="text" id="entry-title" placeholder="Entry Title" required />
-    <textarea id="entry-content" rows="5" placeholder="What's on your mind?" required></textarea>
+    <textarea id="journal-content" rows="5" placeholder="What's on your mind?" required></textarea>
     <button type="submit">Add Entry</button>
   </form>
 
   <div id="entries">
     <!-- Journal entries will appear here -->
   </div>
+
+</div>
 
  
 </body>

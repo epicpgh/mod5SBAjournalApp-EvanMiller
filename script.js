@@ -1,22 +1,10 @@
+const today = new Date();
 
-// const form = document.getElementById('journal-form');
-// const entriesDiv = document.getElementById('entries');
+const form = document.getElementById("journal-form");
+const titleInput = document.getElementById('entry-title');
+const journalInput = document.getElementById("jpurnal-content);
 
-// form.addEventListener('submit', function(e) {
-//   e.preventDefault();
-  
-//   const title = document.getElementById('entry-title').value;
-//   const content = document.getElementById('entry-content').value;
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+const formattedDate = today.toLocaleDateString(undefined, options);
 
-//   const entryEl = document.createElement('div');
-//   entryEl.classList.add('entry');
-//   entryEl.innerHTML = `
-//     <h3>${title}</h3>
-//     <p>${content}</p>
-//   `;
-
-//   entriesDiv.prepend(entryEl);
-
-//   form.reset();
-// });
-cd 
+document.getElementById("spanDate").textContent = `Today's Date: ${formattedDate}`;

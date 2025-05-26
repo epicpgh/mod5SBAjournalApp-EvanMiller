@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-image: linear-gradient(rgb(233, 226, 226), rgb(154, 152, 192));
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: darkgray solid 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Add space between stacked elements */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  #spanDate {
+    text-align: center;
+  }
+  
+  #journal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea, button {
+    padding: 8px;
+    font-size: 1rem;
+  }
+  
